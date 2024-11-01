@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:background="?android:windowBackground"
+              android:gravity="center_horizontal">
+
+    <!-- Картинка анекдота, закрепленная в верхней части -->
+    <ImageView
+            android:id="@+id/image_joke"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp" />
+
+    <!-- Контейнер с прокруткой для текста анекдота -->
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+        <TextView
+                android:id="@+id/text_joke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="?android:textColor"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"/>
+    </ScrollView>
+
+    <!-- Кнопка для загрузки следующего анекдота -->
+    <Button
+            android:id="@+id/button_next_joke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="обновить"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            style="?android:buttonStyle" />
+
+</LinearLayout>
